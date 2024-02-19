@@ -34,34 +34,15 @@ public:
     QLineEdit *lineEdit_3 = nullptr;
 
 public slots:
-    void plus()
-    {
-    lineEdit->setText(getResult('+'));};
-    void minus()
-    {
-        lineEdit->setText(getResult('-'));};
-    void multy()
-    {
-        lineEdit->setText(getResult('*'));};
-    void divide()
-    {
-        lineEdit->setText(getResult('/'));
-    };
+    void plus();
+    void minus();
+    void multy();
+    void divide();
 
 private:
     Ui::calc *ui;
-
-    QString getResult(char _operator) {
-        if (lineEdit_2->text().isEmpty() || lineEdit_2->text().isEmpty()) return "Error";
-        if (_operator == '+') return QString::number(lineEdit_2->text().toInt() + lineEdit_3->text().toInt());
-        if (_operator == '-') return QString::number(lineEdit_2->text().toInt() - lineEdit_3->text().toInt());
-        if (_operator == '*') return QString::number(lineEdit_2->text().toInt() * lineEdit_3->text().toInt());
-
-        if (_operator == '/' ) {
-            if(lineEdit_3->text().toInt()==0) return "Error";
-            return QString::number(lineEdit_2->text().toInt() / lineEdit_3->text().toInt());
-        }
-    };
+    QString errMesg = "Error";
+    QString getResult(char _operator);
 };
 
 
