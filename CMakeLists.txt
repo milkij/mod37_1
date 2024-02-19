@@ -14,7 +14,7 @@ find_package(Qt6 COMPONENTS
         Widgets
         REQUIRED)
 
-add_executable(mod37 main.cpp calc.cpp calc.h calc.ui)
+add_executable(mod37 src/main.cpp src/calc.cpp include/calc.h src/calc.ui)
 target_link_libraries(mod37
         Qt::Core
         Qt::Gui

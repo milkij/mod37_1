@@ -1,7 +1,7 @@
 #include <QApplication>
 
-#include <./ui_calc.h>
-#include "calc.h"
+#include "ui_calc.h"
+#include "../include/calc.h"
 
 int main(int argc, char *argv[]) {
     QApplication a(argc, argv);
